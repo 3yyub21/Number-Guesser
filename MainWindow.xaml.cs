@@ -85,6 +85,11 @@ namespace WPF
                 MessageBox.Show("The Format is wrong, Please enter the valid integer.");
             }
 
+            catch (NegativeNumberException)
+            {
+                MessageBox.Show("The Format is wrong, Please enter the valid integer.");
+            }
+
             catch(Exception exception)
             {
                 MessageBox.Show("Error: " + exception.Message);
