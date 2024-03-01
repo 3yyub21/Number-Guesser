@@ -59,7 +59,12 @@ namespace WPF
             {
                 int myguess = int.Parse(myGuess.Text);
 
-                if (myguess > rnd)
+                if(myguess < 0)
+                {
+                   throw new NegativeNumberException();
+                }
+                    
+                else if (myguess > rnd)
                 {
                     Text.Text = $"My number is less than {myguess}";
                 }
@@ -84,6 +89,8 @@ namespace WPF
             {
                 MessageBox.Show("Error: " + exception.Message);
             }
+
+            myGuess.Clear();
         }
     }
 }
