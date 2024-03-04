@@ -48,7 +48,7 @@ namespace WPF
                 MessageBox.Show("Error: " + exception.Message);
             }
 
-            Text.Text = "Please guess a number and press Guess:";
+            Text.Content = "Please guess a number and press Guess:";
         }
 
         private void Guess_Click(object sender, RoutedEventArgs e)
@@ -66,17 +66,17 @@ namespace WPF
                     
                 else if (myguess > rnd)
                 {
-                    Text.Text = $"My number is less than {myguess}";
+                    Text.Content = $"My number is less than {myguess}";
                 }
 
                 else if (myguess < rnd)
                 {
-                    Text.Text = $"My number is greater than {myguess}";
+                    Text.Content = $"My number is greater than {myguess}";
                 }
 
                 else
                 {
-                    Text.Text = $"Well Done! It took you {count} attempts.";
+                    Text.Content = $"Well Done! It took you {count} attempts.";
                 }
             }
 
